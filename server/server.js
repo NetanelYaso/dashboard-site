@@ -5,12 +5,22 @@ const cors = require("cors");
 const app = express();
 const port = 8080;
 require("./DB")
-const productsRouter = require("./routes/products-routes")
+
+const productsRouter = require("./routes/products-routes");
+const ordersRouter = require("./routes/orders-routes")
+const salesRouter = require("./routes/sales-routes")
 app.use(express.json({ extened: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use("/products",productsRouter)
+
+app.use("/products", productsRouter);
+app.use("/orders", ordersRouter);
+app.use("/sales", salesRouter);
+
+
+
+
 app.get("/", (req, res) => {
     res.send({ message: "ayo whatsup" });
 })

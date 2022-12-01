@@ -4,14 +4,14 @@ const {
     getById,
     create,
     update,
-    deleteProduct
-} = require("../controllers/products-ctrl");
+    deleteSale
+} = require("../controllers/sales-ctrl");
 
 
 router.get("/", getAll);
 router.get("/byId", getById);
 router.post("/saveData", create);
 router.put("/update", update);
-router.delete("/delete", deleteProduct)
+router.delete("/delete", deleteSale);
 
 module.exports = router;

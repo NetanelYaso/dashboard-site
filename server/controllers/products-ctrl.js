@@ -11,7 +11,6 @@ const getAll = async (req, res) => {
             }
             res.status(200).json({ success: true, products })
         })
-        .catch(() => { })
 }
 
 const getById = async (req, res) => {
