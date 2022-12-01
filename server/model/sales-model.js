@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 
 const Sale = new Schema({
     cities: { type: String, required: true },
-    profit: { type: String, required: true },
-    quntity: { type: Number, required: true }
+    profit: { type: Number, required: true },
+    numberOfOreder: { type: Number, required: true }
 },
     { timestamps: true }
 )

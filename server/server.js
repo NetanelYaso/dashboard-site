@@ -19,8 +19,6 @@ app.use("/orders", ordersRouter);
 app.use("/sales", salesRouter);
 
 
-
-
 app.get("/", (req, res) => {
     res.send({ message: "ayo whatsup" });
 })

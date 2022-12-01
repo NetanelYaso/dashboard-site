@@ -25,7 +25,7 @@ const getById = async (req, res) => {
 }
 
 const create = async (req, res) => {
-    await orderModel.insertMany(req.body.id)
+    await orderModel.insertMany(req.body.order)
         .then((result) => res.status(200).json({ success: true, result }))
         .catch((error) => res.status(400).json({ success: false, error }))
 }
