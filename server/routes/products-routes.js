@@ -7,7 +7,6 @@ const {
     deleteProduct
 } = require("../controllers/products-ctrl");
 
-
 router.get("/", getAll);
 router.get("/byId", getById);
 router.post("/saveData", create);
