@@ -2,9 +2,10 @@ import "./Header.css";
 
 function Header() {
   return (
-    <div className="header">
-      <h1>Header</h1>
-    </div>
+    
+      <div class="Layer-1">
+       <h1>Dashboard</h1> 
+      </div>
   );
 };
 

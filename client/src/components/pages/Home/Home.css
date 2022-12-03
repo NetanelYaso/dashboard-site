@@ -1,14 +1,28 @@
-.Layer-2 {
-    width: 1595px;
-    height: 1005px;
-    padding: 49px 11px 86px 33px;
+.home {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4vw;
 }
 
-.Rounded-Rectangle-2-copy-2 {
-    width: 377px;
-    height: 150px;
-    margin: 5px 16px 27px 9px;
-    padding: 50px 131px 57px 135px;
-    border-radius: 4px;
-    background-color: #fff;
+.card {
+    border-color: black;
+}
+
+.barChart {
+    width: 14px;
+    height: 129px;
+    margin: 0 26px 0 33px;
+    background-color: #a3a1fb;
+}
+
+.lineChart {
+    width: 50vw;
+
+}
+
+.paiChart {
+    width: 20vw;
+    height: 213px;
+    margin: 0 0 0 41px;
+    object-fit: contain;
 }
