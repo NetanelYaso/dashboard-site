@@ -10,7 +10,8 @@ import ProductsProvider, { productsContext } from "../../../contexts/products-co
 function Home() {
   const { products, setProducts } = useContext(productsContext);
   const { orders, setOrders } = useContext(productsContext);
-  const [barChart, setBarData] = useState({
+
+  const [barChart1, setBarData1] = useState({
     labels: [...orders.map((data) => data.orderDate)],
     datasets: [{
       label: "user Gain",
@@ -55,10 +56,22 @@ function Home() {
     }]
   })
 
+  const [barChart2, setBarData2] = useState({
+    labels: ["02-12-2022","02-12-2022","02-12-2022","02-12-2022","02-12-2022","02-12-2022","02-12-2022","02-12-2022","02-12-2022","02-12-2022","02-12-2022","02-12-2022","02-12-2022","02-12-2022","02-12-2022",],
+    datasets: [{
+      label: "user Gain",
+      data: [...products.map((data) => data.ProductNumber)],
+      width: "14px",
+      height: "129px",
+      margin: "0 26px 0 33px",
+      backgroundColor: "#fba1c5"
+    }]
+  })
+
   return (
     <div className="home">
       <div className="card">
-        <BarChart className="barChart" chartData={barChart} />
+        <BarChart className="barChart" chartData={barChart1} />
       </div>
       <div className="paiChart">
         <PaiChart chartData={paiChart1} />
@@ -69,7 +82,9 @@ function Home() {
       <div className="lineChart">
         <LineChart chartData={lineChart} />
       </div>
-
+      <div className="card">
+        <BarChart className="barChart" chartData={barChart2} />
+      </div>
     </div>
   );
 };
