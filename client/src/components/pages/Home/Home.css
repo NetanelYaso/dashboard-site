@@ -1,6 +1,5 @@
 .home {
-    display: flex;
-    justify-content: space-between;
+   
     margin-top: 4vw;
 }
 
@@ -21,7 +20,13 @@
 }
 
 .paiChart {
-    width: 20vw;
+    width: 212.6px;
+    height: 213px;
+    margin: 0 0 0 41px;
+    object-fit: contain;
+}
+#errorPai{
+    width: 212.6px;
     height: 213px;
     margin: 0 0 0 41px;
     object-fit: contain;

@@ -5,8 +5,6 @@ export const getOrders = async () => {
     try {
         return await fetch(oredersApi)
             .then(res => res.json())
-            .then(result => console.log(result))
-
     }
     catch (err) {
         throw err;
