@@ -1,5 +1,4 @@
 .home {
-   
     margin-top: 4vw;
 }
 
@@ -7,19 +6,23 @@
     border-color: black;
 }
 
-.barChart {
-    width: 14px;
-    height: 129px;
+.barChart1 {
+    width: 700px;
+    /* height: 129px; */
     margin: 0 26px 0 33px;
     /* background-color: #a3a1fb; */
 }
 
 .lineChart {
-    width: 50vw;
+    width: 1526.2px;
+    height: 157.6px;
+    margin: 0 0 0 0px;
+    padding: 0 0 70.6px;
+    /* background-image: linear-gradient(to bottom, #a3a1fb -83%, rgba(163, 161, 251, 0.1); */
 
 }
 
-.paiChart {
+.paiChart1 {
     width: 212.6px;
     height: 213px;
     margin: 0 0 0 41px;
