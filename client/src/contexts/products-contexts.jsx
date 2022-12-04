@@ -18,8 +18,6 @@ const ProductsProvider = ({ children }) => {
             products, setProducts,
             orders, serOrders,
             sales, setSales                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-
-
         }}>
             {children}
         </productsContext.Provider>

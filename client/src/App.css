@@ -1,7 +1,8 @@
+body {
+  background-color: rgb(240, 240, 247) !important;
+}
 .App {
-  text-align: center;
-  background-color: rgb(240, 240, 247);
-
+  margin: 2vw;
 }
 
 

@@ -1,36 +1,113 @@
-.home {
-    margin-top: 4vw;
+.Card {
+  width: 100%;
+  height: 25vh;
+  background-color: white;
+  
 }
 
-.card {
-    border-color: black;
+.CardRow2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 50vh;
+  background-color: white;
 }
 
-.barChart1 {
-    width: 700px;
-    /* height: 129px; */
-    margin: 0 26px 0 33px;
-    /* background-color: #a3a1fb; */
+.CardRow2Grid {
+  display: grid;
+  grid-template-rows: auto;
 }
 
-.lineChart {
-    width: 1526.2px;
-    height: 157.6px;
-    margin: 0 0 0 0px;
-    padding: 0 0 70.6px;
-    /* background-image: linear-gradient(to bottom, #a3a1fb -83%, rgba(163, 161, 251, 0.1); */
+.CardsInRow2One {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.CardsInRow2Two {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+}
+
+.CardsInRow2Three {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.CardsInRow2Four {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+
+.Graph {
+  width: 100%;
+  height: 25vh;
+  background-color: white;
+}
+
+.maingrid {
+  display: grid;
+  width: 30%;
+}
+
+.grid1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.grid2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.smallDiv {
+  width: 50%;
+  border: 1px solid black;
+}
+
+.col-4 {
+  width: 100% !important;
+}
+
+.GraphAndCard {
+  gap: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.row {
+  margin-top: 2vw !important;
+}
+
+.big {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 
 }
 
-.paiChart1 {
-    width: 212.6px;
-    height: 213px;
-    margin: 0 0 0 41px;
-    object-fit: contain;
+.small {
+  height: 23vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#errorPai{
-    width: 212.6px;
-    height: 213px;
-    margin: 0 0 0 41px;
-    object-fit: contain;
+
+.circle {
+  width: 125px;
+  height: 125px;
+  border: 5px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

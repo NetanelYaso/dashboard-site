@@ -1,114 +1,167 @@
-import "./Home.css";
+import "./Home.css"
 import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import BarChart from "../../featurs/Bar/Bar";
-import LineChart from "../../featurs/Line/Line";
-import { useState, useContext } from "react";
-import { UserData } from "../../../data/data";
-import PaiChart from "../../featurs/Pie/Pie"
+import PieChart from "../../featurs/Pie/Pie";
+import { useContext, useState } from "react";
 import { productsContext } from "../../../contexts/products-contexts";
-function Home() {
-  const dateData = ["02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022"]
-  const { products, setProducts } = useContext(productsContext);
-  const { orders, setOrders } = useContext(productsContext);
+import LineChart from "../../featurs/Line/Line";
+import MyBarChart from "../../featurs/MyBarChart/MyBarChart";
+import MyLineChart from "../../featurs/MyLineChart/MyLineChart";
+function Home({ data }) {
+  // const dateData = ["02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022"]
+  // const { products, setProducts } = useContext(productsContext);
+  // const { orders, setOrders } = useContext(productsContext);
 
-  const [barChart1, setBarData1] = useState({
-    labels: [...orders.map((data) => data.orderDate)],
+  // const [barChart1, setBarData1] = useState({
+  //   labels: [...orders.map((data) => data.orderDate)],
+  //   datasets: [{
+  //     label: "Numbers Of Orders Per Day",
+  //     data: [...orders.map((data) => data.quntityOrder)],
+  //     width: "14px",
+  //     height: "129px",
+  //     margin: "0 26px 0 33px",
+  //     backgroundColor: "#a3a1fb"
+  //   }]
+  // })
 
-    datasets: [{
-      label: "user Gain",
-      data: [...orders.map((data) => data.quntityOrder)],
-      width: "14px",
-      height: "129px",
-      margin: "0 26px 0 33px",
-      backgroundColor: "#a3a1fb"
-    }]
-  })
+  // const [lineChart, setLineData] = useState({
+  //   labels: dateData.map(item=>item),
+  //   datasets: [{
+  //     label: "[54.1, 8, 15.3, 19, 4]",
+  //     data: products.map((data) => data.ProductNumber),
+  //     backgroundColor: "#a3a1fb",
+  //     label: 'Quantity',
+  //     data: products.map((data) => data.ProductNumber),
+  //     tension: 0.4,
 
-  const [lineChart, setLineData] = useState({
-    labels: dateData.map(item=>item),
-    datasets: [{
-      label: "[54.1, 8, 15.3, 19, 4]",
-      data: products.map((data) => data.ProductNumber),
-      backgroundColor: "#a3a1fb",
-      label: 'Quantity',
-      data: products.map((data) => data.ProductNumber),
-      tension: 0.4,
-      
-    },
-    {
-      label: "[54.1, 8, 15.3, 19, 4]",
-      data: UserData.map((data) => data.userGain),
-      backgroundColor: "#56d9fe",
-      label: 'Quantity',
-      data: products.map((data) => data.ProductNumber),
-      tension: 0.4,
-      
-    },
-    {
-      label: "[54.1, 8, 15.3, 19, 4]",
-      data: UserData.map((data) => data.userGain),
-      backgroundColor: "#5fe3a1",
-      label: 'Quantity',
-      data: products.map((data) => data.NumberOfProducts),
-      tension: 0.4,
-    },
-    ]
-  })
+  //   },
+  //   {
+  //     label: "[54.1, 8, 15.3, 19, 4]",
+  //     data: products.map((data) => data.ProductNumber),
+  //     backgroundColor: "#56d9fe",
+  //     label: 'Quantity',
+  //     tension: 0.4,
 
-  const [paiChart1, setPaiData1] = useState({
-    datasets: [{
-      label: [...products.map((data) => data.ProductName)],
-      data: [54.1, 8, 15.3, 19, 4],
-      backgroundColor: [
-        'rgba(180, 50, 79)',
-        'rgba(27, 154, 237)',
-        'rgba(221, 223, 0)',
-        'rgba(36, 203, 229)',
-        'rgba(99, 228, 113)']
-    }]
-  })
-  const [paieChart2, setPaiData2] = useState({
-    labels: ["Purchase Error","client Declined"],
-    datasets: [{
-      label:  ["Purchase Error","client Declined"],
-      data: [54.1, 8, 15.3, 19, 4], 
-      backgroundColor: [
-        'rgba(180, 50, 79)',
-        'rgba(27, 154, 237)',
-      ]
-    }]
-  })
+  //   },
+  //   {
+  //     label: "[54.1, 8, 15.3, 19, 4]",
+  //     data: products.map((data) => data.NumberOfProducts),
+  //     backgroundColor: "#5fe3a1",
+  //     label: 'Quantity',
+  //     tension: 0.4,
 
-  const [barChart2, setBarData2] = useState({
-    labels: dateData.map((item) => item),
-    datasets: [{
-      label: "user Gain",
-      data: [...products.map((data) => data.ProductNumber)],
-      width: "14px",
-      height: "129px",
-      margin: "0 26px 0 33px",
-      backgroundColor: "#fba1c5"
-    }]
-  })
+  //   },
+  //   ]
+  // })
 
+  // const [paiChart1, setPaiData1] = useState({
+  //   // labels: [...products.map((data) => data.ProductName)],
+  //   datasets: [{
+  //     label:  [...products.map((data) => data.ProductName)],
+  //     data: [54.1, 8, 15.3, 19, 4],
+  //     backgroundColor: [
+  //       'rgba(180, 50, 79)',
+  //       'rgba(27, 154, 237)',
+  //       'rgba(221, 223, 0)',
+  //       'rgba(36, 203, 229)',
+  //       'rgba(99, 228, 113)']
+  //   }]
+  // })
+  // const [paieChart2, setPaiData2] = useState({
+  //   labels: ["Purchase Error","client Declined"],
+  //   datasets: [{
+  //     label:  ["Purchase Error","client Declined"],
+  //     data: [54.1, 8, 15.3, 19, 4], 
+  //     backgroundColor: [
+  //       'blue',
+  //       'rgba(27, 154, 237)',
+  //     ]
+  //   }]
+  // })
+
+  // const [barChart2, setBarData2] = useState({
+  //   labels: dateData.map((item) => item),
+  //   datasets: [{
+  //     label: "Number Of Products",
+  //     data: [...products.map((data) => data.ProductNumber)],
+  //     width: "14px",
+  //     height: "129px",
+  //     margin: "0 26px 0 33px",
+
+  //     backgroundColor: "#fba1c5"
+  //   }]
+  // })
   return (
-    <div className="home">
-      <div  className="card">
-        <BarChart className="barChart1" chartData={barChart1} />
-      </div>
-      <div className="paiChart1">
-        <PaiChart chartData={paiChart1} />
-      </div>
-      <div id="errorPai">
-        <PaiChart chartData={paieChart2} />
-      </div>
-      <div className="lineChart">
-        <LineChart chartData={lineChart} />
-      </div>
-      <div className="card">
-        <BarChart className="barChart2" chartData={barChart2} />
-      </div>
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <div className="Card">
+            <BarChart />
+          </div>
+        </Col>
+        <Col>
+          <div className="Card">
+            <PieChart />
+          </div>
+        </Col>
+        <Col>
+          <div className="Card">
+            <PieChart />
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        {/* <Col>
+          <div className="CardRow2">
+            4<PieChart />
+          </div>
+        </Col> */}
+        <Col className="big">
+          <div className="small">
+            <div className="circle">388</div>
+          </div>
+          <div className="small">
+            <div className="circle">323</div>
+          </div>
+          <div className="small">
+            <div className="circle">432</div>
+          </div>
+          <div className="small">
+            <div className="circle">324</div>
+          </div>
+        </Col>
+        <Col>
+          <div className="CardRow2">
+            <LineChart />
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <div id="barChart2" className="Graph">
+            <MyBarChart />
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={8}>
+          <div className="Graph">8</div>
+        </Col>
+        <Col>
+          <Col xs={4}>
+            <div className="GraphAndCard">9</div>
+          </Col>
+          <Col xs={4}>
+            <div className="GraphAndCard">
+              <MyLineChart />
+            </div>
+          </Col>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

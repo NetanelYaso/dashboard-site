@@ -1,8 +1,7 @@
 import "./Header.css";
 
 function Header() {
-  return (
-    
+  return (   
       <div className="Layer-1">
        <h1>Dashboard</h1> 
       </div>
