@@ -14,6 +14,8 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import {faker} from '@faker-js/faker';
+import { useContext } from "react";
+import { productsContext } from "../../../contexts/products-contexts";
 
 ChartJS.register(
   CategoryScale,
@@ -26,7 +28,12 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
+
+
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+export default function MyLineChart() {
+  const {sales, setSales} = useContext(productsContext);
+ const options = {
   responsive: true,
   plugins: {
     legend: {
@@ -39,13 +46,11 @@ export const options = {
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
-export const data = {
+const data = {
   labels,
   datasets: [
     {
-      fill: true,
+      // fill: true,
       label: 'Dataset 2',
       data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
       borderColor: '#a3a1fb',
@@ -55,8 +60,6 @@ export const data = {
     
   ],
 };
-
-export default function MyLineChart() {
   return <Line options={options} data={data} />;
 }
 
