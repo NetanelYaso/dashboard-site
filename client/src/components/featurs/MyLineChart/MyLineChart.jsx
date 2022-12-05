@@ -30,9 +30,10 @@ ChartJS.register(
 
 
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ['6:00-12:00', '12:00-16:00', '16:00-19:00', '20:00-23:00'];
 export default function MyLineChart() {
   const {sales, setSales} = useContext(productsContext);
+  console.log(sales);
  const options = {
   responsive: true,
   plugins: {
@@ -50,17 +51,15 @@ const data = {
   labels,
   datasets: [
     {
-      // fill: true,
-      label: 'Dataset 2',
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+      label: 'Sales By Day Time',
+      data: sales.map(data=>data.profit),
       borderColor: '#a3a1fb',
-      // backgroundColor: '',
       tension: 0.4
     },
     
   ],
 };
-  return <Line options={options} data={data} />;
+  return <Line width={500} options={options} data={data} />;
 }
 
 

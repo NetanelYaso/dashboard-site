@@ -54,14 +54,8 @@ ChartJS.register(
   Legend
 );
 
-
-
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
-
-
 export default function LineChart() {
-  const dateData = ["02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022"]
+  const dateData = ["02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022",]
   const { orders, setOrders } = useContext(productsContext);
   const options = {
     responsive: true,
@@ -82,28 +76,26 @@ export default function LineChart() {
       {
         fill: true,
         label: 'Sum Of Order Amount',
-        data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-        // borderColor: 'rgb(53, 162, 235)',
-        backgroundColor: '#56d9fe',
+        data: orders.map((data) => data.quntityOrder),
+        backgroundColor: ' rgba(95, 227, 161, 0.30)',
         tension: 0.4
       },
       {
         fill: true,
         label: 'Sum Of Order Numbers',
-        data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-        // borderColor: 'rgb(53, 162, 235)',
-        backgroundColor: '#5fe3a1',
-        tension: 0.4
+        data: orders.map((data) => data.profit),
+        backgroundColor: 'rgba(86, 217, 254, 0.50)',
+        tension: 0.4,
+        gardian: ""
       },
       {
         fill: true,
         label: 'Sum Of Refund',
-        data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-        // borderColor: 'rgb(53, 162, 235)',
-        backgroundColor: '#a3a1fb',
+        data: orders.map((data) => data.quntityOrder),
+        backgroundColor: 'rgba(163, 161, 251, 0.20)',
         tension: 0.4
       },
     ],
   };
-  return <Line options={options} data={data} />;
+  return <Line width={1100} options={options} data={data} />;
 }

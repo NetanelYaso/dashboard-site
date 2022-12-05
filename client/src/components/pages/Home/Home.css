@@ -1,113 +1,130 @@
 .Card {
-  width: 100%;
-  height: 25vh;
-  background-color: white;
-}
+    width: 100%;
+    height: 25vh;
+    background-color: white;
+  }
+  .CardRow2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+  }
 
-.CardRow2 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 50vh;
-  background-color: white;
-  margin-top: 4%;
-}
+  #CardRow3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .CardRow2 h1{
+    margin: 4vw;
+    color:rgb(145,185,64)
+  }
+  .ThusdayDiv{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    gap:15%;
+  }
+  .firstDiv{
+    border-right:1px black solid ;
+    width: 60%;
+  }
+  .CardRow2Grid {
+    display: grid;
+    grid-template-rows: auto;
+  }
+  
+  .CardsInRow2One {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+  }
+  
+  .CardsInRow2Two {
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+  }
+  .CardsInRow2Three {
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+  }
+  .CardsInRow2Four {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+  }
+  .Graph {
+    width: 100%;
+    height: 25vh;
+    background-color: white;
+  }
+  .maingrid {
+    display: grid;
+    width: 30%;
+  }
+  .grid1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .grid2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .smallDiv {
+    width: 50%;
+    border: 1px solid black;
+  }
+  .col-4 {
+    width: 100% !important;
+  }
+  .GraphAndCard {
+    margin: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+  }
+  .GraphAndCard h1{
+    color:rgb(145,185,64);
+  }
+  .row {
+    margin-top: 2vw !important;
+  }
+  
+  .big{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  
+  }
+  .small{
+    height: 23vh;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle{
+    width:125px;
+    height: 125px;
+    border: 5px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
 
-.CardRow2Grid {
-  display: grid;
-  grid-template-rows: auto;
-}
-
-.CardsInRow2One {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-
-.CardsInRow2Two {
-  width: 100%;
-  height: 100%;
-  background-color: orange;
-}
-
-.CardsInRow2Three {
-  width: 100%;
-  height: 100%;
-  background-color: yellow;
-}
-
-.CardsInRow2Four {
-  width: 100%;
-  height: 100%;
-  background-color: blue;
-}
-
-.Graph {
-  width: 100%;
-  height: 25vh;
-  background-color: white;
-}
-
-.maingrid {
-  display: grid;
-  width: 30%;
-}
-
-.grid1 {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.grid2 {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.smallDiv {
-  width: 50%;
-  border: 1px solid black;
-}
-
-.col-4 {
-  width: 100% !important;
-}
-
-.GraphAndCard {
-  gap: 2%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-}
-
-.row {
-  margin-top: 2vw !important;
-}
-
-.big {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-
-}
-
-.small {
-  height: 23vh;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle {
-  width: 125px;
-  height: 125px;
-  border: 5px solid black;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .lastGraph{
+    width: 100%;
+    height: 56vh;
+    background-color: white;
+    display: flex;
+    align-items: center
+  }

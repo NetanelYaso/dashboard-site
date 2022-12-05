@@ -83,8 +83,8 @@ ChartJS.register(
 );
 
 export default function BarChart() {
-  const { products, setProducts } = useContext(productsContext);
   const { orders, setOrders } = useContext(productsContext);
+  console.log(orders);
   const options = {
     responsive: true,
     plugins: {
@@ -103,7 +103,7 @@ export default function BarChart() {
     datasets: [
       {
         label: 'Numbers Of Orders Per Day',
-        data: [...orders.map((data) => data.quntityOrder)],
+        data:[...orders.map((data) => data.quntityOrder)],
         backgroundColor: '#a3a1fb',
       },
     ],

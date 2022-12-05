@@ -10,5 +10,5 @@ const Sale = new Schema({
     { timestamps: true }
 )
 
-module.exports = mongoose.model("sales", Sale)
+module.exports = mongoose.model("sales", Sale);
 
