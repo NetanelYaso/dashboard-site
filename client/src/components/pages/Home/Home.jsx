@@ -12,6 +12,7 @@ import MyBarChart from "../../featurs/MyBarChart/MyBarChart";
 import MyLineChart from "../../featurs/MyLineChart/MyLineChart";
 import Cards from "../../featurs/Card/Card";
 import ErrPai from "../../featurs/ErrPai/ErrPai";
+import GeoChart from "../../featurs/GeoMap/GeoMap";
 
 function Home({ data }) {
   // const dateData = ["02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022", "02-12-2022"]
@@ -119,7 +120,7 @@ function Home({ data }) {
       <Row>
         <Col>
           <div className="CardRow2">
-            4<PieChart />
+            <GeoChart />
           </div>
         </Col>
         <Col className="big">
