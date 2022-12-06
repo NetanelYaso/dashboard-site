@@ -8,12 +8,12 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 export default function PieChart() {
-  const { orders, setOrders } = useContext(productsContext)
+  const { orders, setOrders } = useContext(productsContext);
+  console.log(orders);
   const data = {
-    labels: ['Cofee', 'Drink', 'Cake', 'Tea', 'Zinger'],
+    labels: orders.map((data)=>data.orderCategory),
     datasets: [
       {
-        // label: '% of Votes',
         data: [54.1, 8, 15.3, 19, 4],
         backgroundColor: [
           'rgba(180, 50, 79)',
