@@ -125,16 +125,16 @@ function Home({ data }) {
         </Col>
         <Col className="big">
           <div className="small">
-            <div className="circle">388</div>
+            <div className="circle">594</div>
           </div>
           <div className="small">
-            <div className="circle">323</div>
+            <div className="circle">30</div>
           </div>
           <div className="small">
-            <div className="circle">432</div>
+            <div className="circle">158,891</div>
           </div>
           <div className="small">
-            <div className="circle">324</div>
+            <div className="circle">2</div>
           </div>
         </Col>
         <Col>
