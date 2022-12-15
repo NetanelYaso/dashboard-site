@@ -25,7 +25,6 @@ ChartJS.register(
 
 
 
-const labels = ['1/1/2023', '1/2/2023', '1/3/2023', '1/4/2023', '1/5/2023', '1/6/2023', '1/7/2023'];
 
 
 export default function MyBarChart() {
