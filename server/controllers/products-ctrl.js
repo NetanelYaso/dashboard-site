@@ -31,7 +31,7 @@ const create = async (req, res) => {
 }
 
 const update = async (req, res) => {
-    productModel.findByIdAndUpdate(req.body.product)
+    await productModel.findByIdAndUpdate(req.body.product)
         .then((products) => res.status(200).json({ sucsess: true, products }))
         .catch(error => res.status(400).json({ success: false, error }))
 }
